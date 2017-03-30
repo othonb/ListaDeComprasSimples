@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/ic_launcher"
+    tools:context="com.example.professor.myapplication.MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <Button
+        android:id="@+id/btCalcular"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:onClick="btCalcularClickListener"
+        android:text="Calcular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="8dp" />
+
+    <CheckBox
+        android:id="@+id/chkArroz"
+        android:layout_width="129dp"
+        android:layout_height="33dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Arroz"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:layout_marginStart="16dp" />
+
+    <CheckBox
+        android:id="@+id/chkCarne"
+        android:layout_width="129dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="16dp"
+        android:text="Carne"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="19dp"
+        app:layout_constraintTop_toBottomOf="@+id/chkArroz" />
+
+    <CheckBox
+        android:id="@+id/chkFeijao"
+        android:layout_width="127dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="16dp"
+        android:text="Feijão"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/chkCarne" />
+
+    <CheckBox
+        android:id="@+id/chkLeite"
+        android:layout_width="127dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="16dp"
+        android:text="Leite"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="19dp"
+        app:layout_constraintTop_toBottomOf="@+id/chkFeijao" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Produto"
+        android:layout_marginLeft="55dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="55dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantidade"
+        app:layout_constraintLeft_toRightOf="@+id/textView"
+        android:layout_marginLeft="59dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="59dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preço Unitário"
+        app:layout_constraintLeft_toRightOf="@+id/textView2"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <EditText
+        android:id="@+id/editTextQuantidadeArroz"
+        android:layout_width="79dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:inputType="number"
+        android:text="1"
+        app:layout_constraintLeft_toRightOf="@+id/chkArroz"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        android:layout_marginStart="19dp" />
+
+    <EditText
+        android:id="@+id/editTextQuantidadeCarne"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:inputType="number"
+        android:text="1"
+        app:layout_constraintLeft_toRightOf="@+id/chkCarne"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/editTextQuantidadeArroz"
+        android:layout_marginStart="19dp" />
+
+    <EditText
+        android:id="@+id/editTextQuantidadeFeijao"
+        android:layout_width="75dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:inputType="number"
+        android:text="1"
+        app:layout_constraintLeft_toRightOf="@+id/chkFeijao"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/editTextQuantidadeCarne"
+        android:layout_marginStart="21dp" />
+
+    <EditText
+        android:id="@+id/editTextQuantidadeLeite"
+        android:layout_width="76dp"
+        android:layout_height="41dp"
+        android:layout_marginLeft="8dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="1"
+        app:layout_constraintLeft_toRightOf="@+id/chkLeite"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/editTextQuantidadeFeijao"
+        android:layout_marginStart="21dp" />
+
+    <EditText
+        android:id="@+id/editTextPrecoArroz"
+        android:layout_width="95dp"
+        android:layout_height="42dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="1.65"
+        app:layout_constraintLeft_toRightOf="@+id/editTextQuantidadeArroz"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        android:layout_marginStart="13dp" />
+
+    <EditText
+        android:id="@+id/editTextPrecoCarne"
+        android:layout_width="96dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="0.54"
+        app:layout_constraintLeft_toRightOf="@+id/editTextQuantidadeCarne"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPrecoArroz"
+        android:layout_marginStart="11dp" />
+
+    <EditText
+        android:id="@+id/editTextPrecoFeijao"
+        android:layout_width="99dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="13dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="6.38"
+        app:layout_constraintLeft_toRightOf="@+id/editTextQuantidadeFeijao"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPrecoCarne"
+        android:layout_marginStart="13dp" />
+
+    <EditText
+        android:id="@+id/editTextPrecoLeite"
+        android:layout_width="97dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="4.56"
+        app:layout_constraintLeft_toRightOf="@+id/editTextQuantidadeLeite"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPrecoFeijao"
+        android:layout_marginStart="8dp" />
+
+</android.support.constraint.ConstraintLayout>
